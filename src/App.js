@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import oven from './oven.png'
 import "./App.css";
+
+// import logo from './logo.svg';
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -41,19 +44,23 @@ function App() {
         <>
           <h1>The Bakery</h1>
           <h2>Bake your image below</h2>
-          <textarea
-            className="app-input"
-            placeholder={placeholder}
-            onChange={(e) => setPrompt(e.target.value)}
-            rows="10"
-            cols="40"
-          />
+          
+            <textarea
+              className="app-input"
+              placeholder={placeholder}
+              onChange={(e) => setPrompt(e.target.value)}
+              rows="10"
+              cols="40"
+            />
           <button onClick={generateImage}>Generate an Image</button>
-          {result.length > 0 ? (
-            <img className="result-image" src={result} alt="result" />
-          ) : (
-            <></>
-          )}
+          {/* <img src={oven} className="App-logo" alt="logo" /> */}
+          <div className="oven-outline">
+            {result.length > 0 ? (
+              <img className="result-image" src={result} alt="result" />
+            ) : (
+              <></>
+            )}
+          </div>
         </>
       )}
     </div>
