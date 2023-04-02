@@ -31,7 +31,7 @@ function App() {
     <div className="app-main">
       {loading ? (
         <>
-          <h2>Generating..Please Wait..</h2>
+          <h2>Your image is generating, please wait...</h2>
           <div class="lds-ripple">
             <div></div>
             <div></div>
@@ -39,8 +39,8 @@ function App() {
         </>
       ) : (
         <>
-          <h2>Generate an Image using Open AI API</h2>
-
+          <h1>The Bakery</h1>
+          <h2>Bake your image below</h2>
           <textarea
             className="app-input"
             placeholder={placeholder}
